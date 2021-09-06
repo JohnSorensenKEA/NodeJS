@@ -1,0 +1,9 @@
+{
+    "toes": 8,
+    "key": "value",
+    "a": true,
+    "b": [1,2,3],
+    "rider": {
+        "name": "Anders"
+    }
+}
