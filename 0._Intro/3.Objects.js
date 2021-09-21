@@ -15,7 +15,7 @@ console.log(myObj.message);
 
 const me = {
     name: "John",
-    age: "22"
+    age: 22
 };
 
 console.log(me.name, me.age);
@@ -24,12 +24,13 @@ console.log(me.name, me.age);
 // Exercise 3 - Add a property 
 
 const stackOverflow = {
-    isAllowed: function(){return true}
+
 };
 
 // make a rule called isAllowed and let the value be true
 
-console.log(stackOverflow.isAllowed());
+stackOverflow.isAllowed = true;
+console.log(stackOverflow.isAllowed);
 
 // --------------------------------------
 // Exercise 4 - Remove a property 

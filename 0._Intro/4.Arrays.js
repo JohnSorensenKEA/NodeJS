@@ -15,9 +15,7 @@ const friends = [];
 
 // What a lonely array. Add at least 3 friend objects to it.  
 
-friends.push({name: "Bob"});
-friends.push({name: "Carl"});
-friends.push({name: "Gert"});
+friends.push({name: "Bob"}, {name: "Carl"}, {name: "Gert"});
 
 console.log(friends);
 
@@ -42,6 +40,7 @@ const diet = ["tomato", "cucumber", "rocket"];
 
 //diet.concat(diet.slice(0,2), ["hamburger", "soda", "pizza"], diet[2]).slice(3, diet.length);
 
+//Erstat 2 med indexOf "rocket"
 diet.splice(2, 0, "hamburger", "soda", "pizza");
 
 console.log(diet);
@@ -52,7 +51,7 @@ console.log(diet);
 // Remove the LAST element of the array.
 // Don't remove by index. You know in advance that it's the last in the array because you are too full already. 
 
-diet.splice(-1, 1);
+diet.pop();
 
 console.log(diet);
 
@@ -62,6 +61,8 @@ console.log(diet);
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
 
 const dinnerTray = diet.slice();
+//Array.from(diet)
+//[...diet], fjerner med ... og indsætter i ny array
 
 console.log(dinnerTray);
 
@@ -91,7 +92,7 @@ const discardedNumbers = [];
 numbers.forEach(n => {
     if (n > 6 || n < 0) {
         console.log(n);
-    }else{
+    } else {
         discardedNumbers.push(n);
     }
 });
