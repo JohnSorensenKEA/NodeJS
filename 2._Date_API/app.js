@@ -4,7 +4,7 @@ const app = express();
 //Flyttet ud fra scope
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; //US js: starter med sunday
 
-app.get("/getDay", (req,res) => {
+app.get("/getDay", (req, res) => {
     const date = new Date();
     /*res.send(
         {
@@ -14,7 +14,8 @@ app.get("/getDay", (req,res) => {
 
     res.send(
         {
-            day: days[date.getDate()]
+            //day: days[date.getDate()]
+            day: new Date().toLocaleDateString('da-DK', { weekday: 'long' })
         }
     );
 });

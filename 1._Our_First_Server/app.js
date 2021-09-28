@@ -1,6 +1,10 @@
-//const express = require("express"); //Node syntax, module import. 
-//const app = express(); //Skal instatieres
-const app = require("express")(); //Kortere, skal måske bruge andet fra lib, senere. Rart med express i toppen
+const express = require("express"); //Node syntax, module import. 
+const app = express(); //Skal instatieres
+//const app = require("express")(); //Kortere, skal måske bruge andet fra lib, senere. Rart med express i toppen
+app.use(express.json());
+
+const cake = require("./cake.json");
+console.log(cake);
 
 app.get("/", (req, res) => {
     res.send({name: "Bob", age: 21, wierd: true});
@@ -54,6 +58,17 @@ app.get("/frontpage", (req, res) => {
         {message: "Welcome"}
     );
 });
+
+
+app.post("/messages", (req, res) => {
+    console.log(req.body);
+
+    res.send({
+        request: req.body
+    });
+});
+
+
 
 app.listen(8080); // Rart i bunden
 
