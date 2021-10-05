@@ -21,7 +21,29 @@ app.get("/teenageroom", (req, res) => {
     res.sendFile(__dirname + "/public/teenageroom.html");
 });
 
-console.log(process.env.PORT);
+app.get("/creditor", (req, res) => {
+    res.send({ message: "You are indebted and you won't get what you want" });
+});
+
+/*
+app.get("/sausage/:credit", (req, res) => {
+    if (req.params.credit < 25) {
+        res.redirect("/creditor");
+    } else {
+        res.send({ sausage: "Pølse snak" });
+    }
+});
+*/
+
+app.get("/sausage", (req, res) => {
+    if (req.query.credit < 25) {
+        res.redirect("/creditor");
+    } else {
+        res.send({ sausage: "Pølse snak" });
+    }
+});
+
+//console.log(process.env.PORT);
 
 // Task allow the developer setting the port
 // Task start-dev should run on port 8080
@@ -34,5 +56,4 @@ const server = app.listen(PORT, error => {
     }
     console.log("Server is running on port", server.address().port);
 });
-
 //^^Done
