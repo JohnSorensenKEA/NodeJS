@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(206, 255, 206);
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+
+#sub-title {
+    text-align: center;
+    margin: 0;
+}
+
+.fact {
+    font-size: 130%;
+}
