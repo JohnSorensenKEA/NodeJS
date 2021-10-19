@@ -1,4 +1,6 @@
+//import fetch from "node-fetch";
 const express = require("express");
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const app = express();
 
 app.use(express.json());
@@ -42,6 +44,28 @@ app.get("/sausage", (req, res) => {
         res.send({ sausage: "Pølse snak" });
     }
 });
+
+
+
+/* 
+assignment: Create an endpoint called /proxy
+and fetch the google homepage and send it to the client as response 
+*/
+
+app.get("/proxy", (req, res) => {
+    fetch('https://www.google.com')
+    .then(response => response.text())
+    .then(data => res.send(data));
+});
+
+app.get("/proxy2", async (req, res) => {
+    const response = await fetch('https://www.google.com');
+    const data = await response.text();
+
+    res.send(data);
+});
+
+
 
 //console.log(process.env.PORT);
 
