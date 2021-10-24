@@ -64,3 +64,9 @@
     border: solid black 2px;
     padding: 0;
 }
+.list {
+    list-style-type: disc;
+}
+.list > li > span {
+    font-weight: bold;
+}

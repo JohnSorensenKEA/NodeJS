@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/index/index.css">
+    <link href="/global/nav.css" rel="stylesheet">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <header>
+<div class="navbar">
+    <a href="/">Forside</a>
+    <div class="dropdown">
+      <button class="dropbtn">Teori 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/js-datatypes">JavaScript Datatypes</a>
+        <a href="/node-js">Node.js</a>
+        <a href="/variable-declaration">Variable Declaration</a>
+        <a href="/js-functions">JavaScript Functions</a>
+        <a href="/package-json">package.json</a>
+        <a href="/npm-packages">npm packages</a>
+        <a href="/rest-api">REST API</a>
+        <a href="/js-loops">JavaScript Loop Methods</a>
+        <a href="/body-parsing-&-postman">Body parsing & Postman</a>
+        <a href="/crud-api">CRUD API Implementation</a>
+        <a href="/file-serving">File Serving</a>
+      </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Værktøjer 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/vscode">Visual Studio Code</a>
+          <a href="/postman">Postman</a>
+          <a href="/npm">npm</a>
+          <a href="/node">Node.js - node</a>
+          <a href="/nodemon">Nodemon</a>
+          <a href="/git">git</a>
+        </div>
+      </div> 
+  </div>
+    </header>
+    <br>
+
+    <div class="container">
+        <div class="item">
+            <div class="bar">
+                <p class="title">JavaScript Functions</p>
+            </div>
+            <div class="content">
+                <p class="p-text">Eksekverende kode køres i funktioner og kan defineres så koden kan kaldes.</p>
+                <div class="code-block">
+                    <p>function eksempel(param) {</p>
+                    <p>&ensp;console.log(”Hello”);</p>
+                    <p>}</p>
+                    <p>eksempel();</p>
+                </div>
+                <p class="p-text">Funktionerne defineret i JS, er first-class citizens. 
+                    Så de er alle sammen registreret, så de kan kaldes hvor som helst i dokumentet.</p>
+                <p class="p-text">I JS kan funktioner parses som parametre, 
+                    så de kan kaldes som en callback function i funktionen.</p>
+                <div class="code-block">
+                    <p>function eksempel(callBackFunction) {</p>
+                    <p>&ensp;callBackFunction();</p>
+                    <p>}</p>
+                    <p>eksempel( function () { console.log(”callback”) }); </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="/index/index.js"></script>
+</body>
+</html>
