@@ -1,0 +1,35 @@
+{
+  "name": "mandatory_1",
+  "version": "0.0.1",
+  "description": "A Node.js Express project, that serves frontend with documentation on things learned in 'Fullstack Node.js'. Made for a mandatory assignment.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnSorensenKEA/NodeJS.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "HTML",
+    "CSS",
+    "mandatory_1"
+  ],
+  "author": "John",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnSorensenKEA/NodeJS/issues"
+  },
+  "homepage": "https://github.com/JohnSorensenKEA/NodeJS#readme",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.17"
+  }
+}
