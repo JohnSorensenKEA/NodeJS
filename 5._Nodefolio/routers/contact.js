@@ -32,15 +32,18 @@ router.post("/api/contact", (req, res) => {
     ${Date()}
     `;
 
+    /*
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
             console.log(error);
         } else {
             console.log('Email sent: ' + info.response);
         }
-    });
+    });*/
 
-    res.redirect("/contacts");
+    console.log(req.body);
+
+    res.sendStatus(200);
 });
 
 /* Module exports */
