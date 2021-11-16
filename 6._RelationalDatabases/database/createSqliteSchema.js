@@ -1,9 +1,10 @@
-import { connectSqlite } from "./connectSqlite.js";
+import { createConnection } from "./connectSqlite.js";
 
 (async () => {
-    const dbConnection = await connectSqlite();
+    //const dbConnection = await connectSqlite();
+    const connection = await createConnection();
 
-    await dbConnection.exec("DROP TABLE IF EXISTS games");
+    await connection.exec("DROP TABLE IF EXISTS games");
 
     const gamesTableSchema = `
         CREATE TABLE games (
@@ -14,5 +15,5 @@ import { connectSqlite } from "./connectSqlite.js";
         )
     `;
     
-    await dbConnection.exec(gamesTableSchema);
+    await connection.exec(gamesTableSchema);
 })();
